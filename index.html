@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/variables.js"></script>
+    <script src="./js/getSPData.js"></script>
+    <title>Keltbray SC Tender Portal</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="icon" href="../assets/media/Keltbray-logo_single.png" type="image/x-icon">
+</head>
+<body>
+
+<header id="main-header">
+    <div class="header-column-end">
+        <!-- Logo goes here -->
+        <img class="logo" src="./assets/media/Keltbray logo_Main_min clear space.png" alt="Logo">
+    </div>
+    <div class="header-column-middle">
+        <!-- Title goes here -->
+        <h2 class="header-title" id="title-header"> </h2>
+    </div>
+    <div class="header-column-end">
+        <!-- Menu icon goes here -->
+        <div class="menu-toggle">☰</div>
+    </div>
+</header>
+
+
+
+    <div class="bannerNarrow" id="banner">
+        <h2 id="PP_title">Project Portal</h2>
+    </div> <!-- Banner inserted here -->
+    <div class="content-wrapper bodymiddle">
+        <h2 id="PP_Welcome">Welcome to My Website</h2>
+        <p>Please select a tender below to view</p>
+        <!-- Add your content here -->
+    </div>
+    <div class="grid-container" id="TenderListGrid">
+
+  </div>
+
+
+
+<footer>
+    <div class="footer-content-index">
+      <div class="footer-logo">
+        <img src="./assets/media/Keltbray logo_Wht_Wht box_min clear space.png" alt="Footer Logo">
+      </div>
+      <h2 class="footer-heading">Infrastructure PMO</h2>
+    </div>
+</footer>
+
+<!-- Side menu -->
+<div class="side-menu">
+    <ul>
+    <li><a href="../pages/home.html">Home</a></li>
+      <li onclick="openInNewTab(sessionStorage.getItem('accAccessLink'))"><a>ACC Access</a></li>
+      <li onclick="window.location.href='../pages/inductions.html'"><a >Inductions</a></li>
+      <li onclick="window.location.href='../pages/sitenoticeboard.html'"><a >Site Notice Board</a></li>
+      <li onclick="window.location.href='../pages/projectresources.html'"><a >Project Resources</a></li>
+      <li onclick="window.location.href='../pages/training.html'"><a >Training</a></li>
+      <li onclick="openInNewTab(sessionStorage.getItem('siteFormsLink'))"><a >Site Forms</a></li>
+            <!-- <li onclick="window.location.href='../pages/rrmatrix.html'"><a >Roles &amp; Responsibilities Matrix</a></li>-->
+      <li onclick="window.location.href='../pages/faqs.html'"><a >FAQs</a></li>
+      <li onclick="window.location.href='../pages/lessonslearnt.html'"><a >Lessons Learnt</a></li>
+      <li onclick="window.location.href='../pages/dashboards.html'"><a >Dashboards</a></li>
+      <li onclick="openInNewTab(sessionStorage.getItem('fileUploaderLink'))"><a>File Uploader</a></li>
+    </ul>
+  </div>
+
+<script>
+  // JavaScript to toggle side menu
+  const menuToggle = document.querySelector('.menu-toggle');
+  const sideMenu = document.querySelector('.side-menu');
+
+  menuToggle.addEventListener('click', function() {
+    const leftPosition = sideMenu.style.left === '0px' ? '-300px' : '0px';
+    sideMenu.style.left = leftPosition;
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+        const banner = document.getElementById('banner');
+        const header = document.getElementById('main-header');
+        const headerTitle = document.getElementById('title-header');
+        const headerTitleClass = header.querySelector('.header-title');
+        // Get the top position of the banner
+        const bannerTop = banner.getBoundingClientRect().top;
+
+        // If the banner is out of view (scrolled out of the viewport)
+        if (bannerTop <= 0) {
+        // Display the banner text in the header
+        headerTitle.textContent = banner.querySelector('h2').textContent;
+        headerTitleClass.classList.add('fade-in');
+        } else {
+        // Reset the header text when the banner is in view
+        headerTitle.textContent = "";
+        headerTitleClass.classList.remove('fade-in');
+        }
+    });
+
+    document.querySelectorAll('.button-1').forEach(function(button) {
+    button.addEventListener('click', function() {
+        sessionStorage.setItem('ID', this.getAttribute('value'));
+        console.log('ID', sessionStorage.getItem('ID'));
+    });
+});
+});
+
+
+
+
+</script>
+
+</body>
+</html>

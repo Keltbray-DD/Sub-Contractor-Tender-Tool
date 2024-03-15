@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/variables.js"></script>
+
+    <title>Keltbray SC Tender Portal</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="icon" href="../assets/media/Keltbray-logo_single.png" type="image/x-icon">
+</head>
+<body>
+
+<header id="main-header">
+    <div class="header-column-end">
+        <!-- Logo goes here -->
+        <img class="logo" src="../assets/media/Keltbray logo_Main_min clear space.png" alt="Logo">
+    </div>
+    <div class="header-column-middle">
+        <!-- Title goes here -->
+        <h2 class="header-title" id="title-header"> </h2>
+    </div>
+    <div class="header-column-end">
+        <!-- Menu icon goes here -->
+        <div class="menu-toggle">☰</div>
+    </div>
+</header>
+
+
+
+    <div class="bannerNarrow" id="banner">
+        <h2 id="PP_title">Project Portal</h2>
+    </div> <!-- Banner inserted here -->
+    <div class="content-wrapper bodymiddle">
+        <h2 id="PP_TenderQuestions">Tender Questionaire</h2>
+        <p id="tenderID">Please select a tender below to view</p>
+        <!-- Add your content here -->
+    </div>
+    <div class="questionnaire">
+      <div class="question active" id="question1">
+
+        <div class="questionbody">
+          <label for="answer1">
+            <a class="questionTopic">Assurance of supply</a>
+            <br>a) The successful principal vendors will be accountable for 100% delivery of agreed resources 
+            throughout the duration of the contract in their respective Lot(s); 
+            <br>b) Availability of local, flexible, agile labour resource
+            <br>c) Have a suitable and efficient out of hours on call service
+            <br><br>Considering the above objectives, please provide your committed plans demonstrating how you 
+            will assure Keltbray you have the ability to supply all agreed resources throughout the duration of 
+            the contract, whilst also achieving the above objectives.
+            <br><br><b>Word Count: Maximum of 1,000</b></label>
+            <div>
+              <textarea id="answer1" rows="4" cols="50" oninput="countWords()"></textarea>
+              <p id="wordCountQuestion1" class="wordCount">Word count: 0</p>
+            </div>
+        </div>
+        <div class="questionButtons">
+          <button class="next-button" onclick="nextQuestion()">Next</button>
+        </div>
+      </div>
+
+      <div class="question" id="question2">
+
+      <div class="questionbody">
+        <label for="answer2">
+          <a class="questionTopic">Resilience / Quality and Competence of Labour</a><br>
+          Failure of personnel to attend sites when required (“no shows”) can result in the need to cancel the
+          planned work in respect of which the relevant personnel had been required to attend. This can
+          result in significant wasted costs and disruption (e.g. cancellation costs relating to staff, equipment
+          and plant already ordered or delivered to the site due to inability to proceed with the planned
+          works, re-scheduling access and re-arranging the work and the required inputs for another date).
+          <br>a) minimising the number and impact on Keltbray of no-shows by personnel;
+          <br>b) minimising the frequency of delays in availability and/or attendance and minimise time spent
+          on induction/familiarisation with local site layouts, working conditions, controls and protocols;
+          <br>c) minimising the extent of travel;
+          <br>d) demonstrating realistic and deliverable support mechanisms to flex resourcing to meet
+          unplanned increases in workload and staffing requirements;
+          <br>e) Fair and reasonable labour rates for staff, which encourages the above;
+          Please provide your committed plans explaining how you will ensure the resilience and provision
+          of consistent, quality labour for the duration of this contract incorporating the objectives above.
+          Your answer should include details of your business continuity strategy (incl. any business
+          continuity management recognised standard), your methodology in developing a sufficiently
+          sized diverse resource pool, how you will monitor and manage performance, how you will mitigate
+          against risk of failure, how your organisation will be structured.<br>
+          <br><b>Word Count: Maximum of 1,500</b>
+          </label>
+        <div>
+        <textarea id="answer2" rows="4" cols="50"></textarea>
+        <p id="wordCountQuestion2" class="wordCount">Word count: 0</p>
+      </div>
+      </div>
+      <div class="questionButtons">
+        <button class="previous-button" onclick="previousQuestion()">Previous</button>
+        <button class="next-button" onclick="nextQuestion()">Next</button>
+      </div>
+      </div>
+
+      <div class="question" id="question3">
+      <div class="questionbody">
+        <label for="answer3">
+          <a class="questionTopic">Recruiting</a><br>
+          Please provide your recruitment plan which focuses on new to industry labour as well as underrepresented
+          groups within the railway workforce.
+          You will need to describe how, through the award of this contract, you will make a positive
+          contribution to social performance, providing examples where you will be:<br>
+          <br>- inspiring and developing tomorrow’s workforce for Frontline Labour
+          <br>- supporting and investing in recruiting new to industry labour
+          <br>- inspiring and developing a diverse and inclusive workforce for Frontline Labour
+          <br><br><b>Word Count: Maximum of 1,000</b>
+          </label>
+        <div>
+        <textarea id="answer3" rows="4" cols="50"></textarea>
+        <p id="wordCountQuestion3" class="wordCount">Word count: 0</p>
+      </div>
+    </div>
+      <div class="questionButtons">
+        <button class="previous-button" onclick="previousQuestion()">Previous</button>
+        <button class="next-button" onclick="nextQuestion()">Next</button>
+      </div>
+      </div>
+
+      <div class="question" id="question4">
+      <div class="questionbody">
+        <label for="answer4">
+          <a class="questionTopic">Health and Safety Man-agement</a><br>
+          Keltbray Rail is committed to reducing the health and safety risks for all employees and
+          contracted staff. In relation to the provision of labour services on this contract, please
+          describe how you will manage the identification assessment and mitigation of the
+          following risk areas:
+          <br>i) Workforce fatigue
+          <br>ii) Workforce occupational driving
+          <br>iii) Workforce health and wellbeing, including health surveillance
+          <br>Please detail what strategies, policies and procedures you will utilise to reduce the overall
+          risks, including (but not limited to):
+          <br>- Fatigue assessment and fatigue management planning
+          <br>- Fatigue exceedance management
+          <br>- Licence checking and Driving competence management
+          <br>- Route planning and driving time management
+          <br>- Assessment of vehicle safety when hiring or purchasing vehicles for use on this contract.
+          <br>- Occupational health and wellbeing awareness
+          <br>- Health surveillance management
+          <br>Your response should include what preventative actions will be taken as well as reactive
+          corrective actions. Please provide evidence to support your response showing tools used,
+          risk assessments, and improvement planning and monitoring.
+          <br><br><b>Word Count: Maximum of 2,500</b>
+          </label>
+        <div>
+        <textarea id="answer4" rows="4" cols="50"></textarea>
+        <p id="wordCountQuestion4" class="wordCount">Word count: 0</p>
+      </div>
+      </div>
+      <div class="questionButtons">
+        <button class="previous-button" onclick="previousQuestion()">Previous</button>
+        <button class="next-button" onclick="nextQuestion()">Next</button>
+      </div>
+      </div>
+
+      <div class="question" id="question5">
+      <div class="questionbody">
+        <label for="answer5">
+          <a class="questionTopic">Equipping Labour</a><br>
+          Please provide details of the commitments you will make to ensure the labour you
+          provide in your service offering is equipped to a suitable standard in order to fulfil the
+          required roles. Your response should cover the following as a minimum:
+          <br>• Your process for ensuring you source and provide fit for purpose PPE
+          <br>• Your policy for the provision of small hand tools to your workforce
+          <br>• Your process for selection and calibration of small hand tools and equipment
+          <br>• How you will satisfy yourself as a Company that individuals are competent to manage
+          and maintain small hand tools
+          <br>• How you will obtain feedback from employees to ensure any provided equipment is
+          suitable and fit for purpose
+          <br><br><b>Word Count: Maximum of 1,000</b>
+          </label>
+        <div>
+        <textarea id="answer5" rows="4" cols="50"></textarea>
+        <p id="wordCountQuestion5" class="wordCount">Word count: 0</p>
+      </div>
+      </div>
+      <div class="questionButtons">
+        <button class="previous-button" onclick="previousQuestion()">Previous</button>
+        <button class="next-button" onclick="nextQuestion()">Next</button>
+      </div>
+      </div>
+
+      <div class="question" id="question6">
+      <div class="questionbody">
+        <label for="answer6">
+          <a class="questionTopic">Health and Safety Man-agement</a><br>
+          Keltbray Rail is committed to not driving up the industry rates through the introduction
+          of new to industry recruits, investing in new starters and ensuring top quality training
+          and assessments and not just employing rail employees already employed by others just
+          drives up industry rates, additionally. Please provide details on how you introduce new to
+          industry trained and assessed skills into the industry.
+          Please provide your committed plans detailing how you will ensure that competent resources
+          are provided for each role throughout the duration of the contract. To support
+          your response, please explain how you will implement and maintain training, development
+          and competence management requirements of all individuals within your organisation
+          and your supply chain. Please also describe the process your organisation has for
+          ensuring the labour you provide has had appropriate training, including:
+          <br>• If training is conducted in-house or outsourced to a 3rd party
+          <br>• If outsourced what criteria you use to select your training providers for front-line staff
+          <br>• How you audit your training suppliers
+          <br>• If training is conducted in-house, how you assess your trainers
+          <br>• What health and safety training is provided to front line labour and back office staff
+          <br>• How you maintain your training records and competencies for all staff, detailing what
+          types of information you record
+          <br>• How competency levels of front line labour staff are assessed
+          <br>• Details of how newly recruited frontline labour staff are mentored
+          <br>• Ratio of new to industry starters through recruitment of current sponsored staff
+          <br>• Training that they undertake
+          <br>• How you interface with clients on individual performance
+          <br>• How you assess and record performance
+          <br>• How you will satisfy Keltbray that we are aware of individuals skills and experience
+          <br>• How you propose to work with Keltbray to ensure that training is suitable and additional
+          skill shortages are recognised and addressed
+          <br><br><b>Word Count: Maximum of 4,000</b>
+          </label>
+        <div>
+        <textarea id="answer6" rows="4" cols="50"></textarea>
+        <p id="wordCountQuestion6" class="wordCount">Word count: 0</p>
+      </div>
+      </div>
+      <div class="questionButtons">
+        <button class="previous-button" onclick="previousQuestion()">Previous</button>
+        <button class="next-button" onclick="nextQuestion()">Next</button>
+      </div>
+      </div>
+
+      <div class="question" id="question7">
+
+      <div class="questionbody">
+        <label for="answer7">
+          <a class="questionTopic">Human Be-haviours Training</a><br>
+          Keltbray Rail cannot rely solely on processes and procedures to ensure the safety of our
+          workforce, the culture and behaviours of our organisation and our staff are crucial in
+          making sure everyone is home safe every day.
+          Please provide your process explaining how you train staff in human behav-iours/safety
+          behaviours/non-technical skills training to positively contribute to the improved health
+          and safety of the workforce. To support the response, please detail any human behaviours
+          programmes already in existence in your organisation and evidence any best practice and
+          lessons learned from previ-ous behavioural training programmes.
+          </label>
+        <div>
+        <textarea id="answer7" rows="4" cols="50"></textarea>
+        <p id="wordCountQuestion7" class="wordCount">Word count: 0</p>
+      </div>
+      </div>
+      <div class="questionButtons">
+        <button class="previous-button" onclick="previousQuestion()">Previous</button>
+        <button class="next-button" onclick="nextQuestion()">Next</button>
+      </div>
+      </div>
+      <div class="question" id="question8">
+
+        <div class="questionbody">
+          <label>
+            <a class="questionTopic">Details</a><br>
+              Please Complete the fields to your right to submit your answers
+            </label>
+          <div class="detailsform">
+            <label for="name">Full Name</label>
+            <input id="name" type="text">
+            <label for="email">Company Email</label>
+            <input id="email" type="email">
+            <label for="company">Company</label>
+            <input id="company" type="text">
+        </div>
+        </div>
+        <div class="questionButtons">
+          <button class="previous-button" onclick="previousQuestion()">Previous</button>
+          <button class="next-button" onclick="submitAnswers()">Submit</button>
+        </div>
+        </div>
+    </div>
+
+
+
+
+
+<footer>
+    <div class="footer-content-index">
+      <div class="footer-logo">
+        <img src="../assets/media/Keltbray logo_Wht_Wht box_min clear space.png" alt="Footer Logo">
+      </div>
+      <h2 class="footer-heading">Infrastructure PMO</h2>
+    </div>
+</footer>
+
+<!-- Side menu -->
+<div class="side-menu">
+    <ul>
+    <li><a href="../pages/home.html">Home</a></li>
+      <li onclick="openInNewTab(sessionStorage.getItem('accAccessLink'))"><a>ACC Access</a></li>
+      <li onclick="window.location.href='../pages/inductions.html'"><a >Inductions</a></li>
+      <li onclick="window.location.href='../pages/sitenoticeboard.html'"><a >Site Notice Board</a></li>
+      <li onclick="window.location.href='../pages/projectresources.html'"><a >Project Resources</a></li>
+      <li onclick="window.location.href='../pages/training.html'"><a >Training</a></li>
+      <li onclick="openInNewTab(sessionStorage.getItem('siteFormsLink'))"><a >Site Forms</a></li>
+            <!-- <li onclick="window.location.href='../pages/rrmatrix.html'"><a >Roles &amp; Responsibilities Matrix</a></li>-->
+      <li onclick="window.location.href='../pages/faqs.html'"><a >FAQs</a></li>
+      <li onclick="window.location.href='../pages/lessonslearnt.html'"><a >Lessons Learnt</a></li>
+      <li onclick="window.location.href='../pages/dashboards.html'"><a >Dashboards</a></li>
+      <li onclick="openInNewTab(sessionStorage.getItem('fileUploaderLink'))"><a>File Uploader</a></li>
+    </ul>
+  </div>
+
+<script>
+  // JavaScript to toggle side menu
+  const menuToggle = document.querySelector('.menu-toggle');
+  const sideMenu = document.querySelector('.side-menu');
+
+  function countWords() {
+      // Get the text from the textarea
+      var text = document.getElementById(`answer${currentQuestion}`).value;
+      
+      // Split the text into words using regular expressions
+      var words = text.match(/\S+/g);
+      
+      // Count the number of words
+      var wordCount = words ? words.length : 0;
+      
+      // Display the word count
+      document.getElementById(`wordCountQuestion${currentQuestion}`).innerHTML = "Word count: " + wordCount;
+    }
+
+  let currentQuestion = 1;
+
+  function nextQuestion() {
+    document.getElementById(`question${currentQuestion}`).classList.remove('active');
+    currentQuestion++;
+    if (currentQuestion <= 8) {
+      document.getElementById(`question${currentQuestion}`).classList.add('active');
+    }
+  }
+
+  function previousQuestion() {
+    document.getElementById(`question${currentQuestion}`).classList.remove('active');
+    currentQuestion--;
+    if (currentQuestion >= 1) {
+      document.getElementById(`question${currentQuestion}`).classList.add('active');
+    }
+  }
+
+  function submitAnswers() {
+    // You can implement your submission logic here
+    alert("Answers submitted successfully!");
+    const bodyData = {
+        tenderID: projectID,
+        Question1: $("#answer1").val(),
+        Question2: $("#answer2").val(),
+        Question3: $("#answer3").val(),
+        Question4: $("#answer4").val(),
+        Question5: $("#answer5").val(),
+        Question6: $("#answer6").val(),
+        Question7: $("#answer7").val(),
+        email: $("#email").val(),
+        fullname: $("#name").val(),
+        company: $("#company").val(),
+    };
+
+    const headers = {
+        'Content-Type':"applicatio/json",
+    };
+
+    const requestOptions = {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(bodyData)
+    };
+
+    const apiUrl = "https://prod-15.uksouth.logic.azure.com:443/workflows/962a7a1818d14c1d94cc23381ec84133/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=hfvqnSjNu5_YhtCPmXAzNI15ocA9CEagBU4r33y8elA";
+    //console.log(apiUrl)
+    //console.log(requestOptions)
+    responseData = await fetch(apiUrl,requestOptions)
+        .then(response => response.json())
+        .then(data => {
+            const JSONdata = data
+        //console.log(JSONdata)
+        //console.log(JSONdata.uploadKey)
+        //console.log(JSONdata.urls)
+        return JSONdata
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    return responseData
+  }
+
+  menuToggle.addEventListener('click', function() {
+    const leftPosition = sideMenu.style.left === '0px' ? '-300px' : '0px';
+    sideMenu.style.left = leftPosition;
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+        const banner = document.getElementById('banner');
+        const header = document.getElementById('main-header');
+        const headerTitle = document.getElementById('title-header');
+        const headerTitleClass = header.querySelector('.header-title');
+        // Get the top position of the banner
+        const bannerTop = banner.getBoundingClientRect().top;
+
+        // If the banner is out of view (scrolled out of the viewport)
+        if (bannerTop <= 0) {
+        // Display the banner text in the header
+        headerTitle.textContent = banner.querySelector('h2').textContent;
+        headerTitleClass.classList.add('fade-in');
+        } else {
+        // Reset the header text when the banner is in view
+        headerTitle.textContent = "";
+        headerTitleClass.classList.remove('fade-in');
+        }
+
+        document.getElementById('tenderID').innerHTML = sessionStorage.getItem('ID')
+    });
+
+});
+
+
+</script>
+
+</body>
+</html>

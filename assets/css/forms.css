@@ -1,0 +1,273 @@
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: #4CAF50; /* Green */
+    font-size: 20px;
+    color: white;
+    padding: 12px 0; /* Adjust vertical padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%; /* Set width to 50% */
+    display: block; /* Make it a block element */
+    margin: 0 auto; /* Center horizontally */
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+input[type="submit"]:active {
+    background-color: #3e8e41; /* Slightly darker green */
+}
+
+/* Style for the submit button */
+.submitButton {
+    background-color: #4CAF50; /* Green */
+    font-size: 20px;
+    color: white;
+    padding: 12px 0; /* Adjust vertical padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 70%; /* Set width to 50% */
+    display: block; /* Make it a block element */
+    margin: 5px auto; /* Center horizontally */
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.submitButton:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.submitButton:active {
+    background-color: #3e8e41; /* Slightly darker green */
+}
+
+/* Styles for Drag and drop */
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    width: 90%;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    }
+
+#drop-area.hover {
+    border-color: #3b97e3;
+    }
+
+#drop-area.uploaded {
+    background-color: #f0f0f0;
+    }
+
+#drop-area p {
+    margin: 0;
+    color: #666;
+    }
+
+#fileInput {
+    display: none;
+    }
+
+.file-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #3b97e3;
+    }
+
+#file-info {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    }
+
+
+
+ul li {
+        list-style: none;
+    }
+.form-label {
+    width: 100%;
+    margin: 10 0;
+    text-align: left;
+    margin: 5px 10px;
+    }
+
+.form-close {
+    width: 100%;
+    margin: 10 0;
+    text-align: right;
+    font-size: 40px;
+    cursor: pointer;
+    }
+.form-label-half {
+        margin: 10 0;
+        width: calc(50% - 20px); /* 100% minus the padding */
+    }
+.form-input-half {
+        display: inline;
+        width: 50% /* 100% minus the padding */
+    }
+
+.form-details {
+        display: flex;
+    }
+
+.form-container {
+    position: fixed;
+    background-color: #FAFAFA;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* slight box shadow */
+    width: 50%; /* Adjust the width of the container */
+    margin: 0 auto; /* Center the container */
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-header {
+    margin-top: 0;
+    font-size: larger;
+    display: block;
+    
+}
+
+.form-textbox {
+    padding: 0 .625em;
+    width: 100%;
+
+}
+.larger-textbox {
+    height: 10rem;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+
+
+  }
+
+.lessonslearntform{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 40px;
+    background-color: white ;
+    border-radius: 10px;
+}
+
+.generalform{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 10%;
+    background-color: white ;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+    .lessonslearntform{
+        align-items: center;
+        width: 95%;
+        padding: 20px;
+        margin: 0 auto;
+        margin-top: 40px;
+        background-color: white ;
+        border-radius: 10px;
+    }
+}
+
+/* Style for the text input */
+input[type="text"] {
+    width: calc(100% - 10px); /* 100% minus the padding */
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="email"] {
+    width: calc(100% - 20px); /* 100% minus the padding */
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50; /* Green */
+}
+
+input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+input[type="email"]:focus {
+    border-color: #4CAF50; /* Green */
+}
+
+input[type="email"]::placeholder {
+    color: #aaa;
+}
+
+select {
+    font-size: medium;
+    width: calc(100% - 20px); /* 100% minus the padding */
+    padding: 5px 10px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none;
+    /*background-image: linear-gradient(45deg, transparent 50%, #ccc 50%), linear-gradient(135deg, #ccc 50%, transparent 50%);*/
+    background-position: calc(100% - 10px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px);
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+}
+
+/* Style for textarea */
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    resize: none; /* Prevent resizing */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-family: Arial, sans-serif; /* Specify font family */
+}
+
+/* Style for textarea when focused */
+textarea:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #4CAF50; /* Green */
+}

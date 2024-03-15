@@ -1,0 +1,707 @@
+
+
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/* Styling the body */
+body {
+    font-family: Arial, sans-serif;
+
+    line-height: 1.6;
+    background-color: #bebfbc;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+header {
+    width: auto;
+}
+    /* Styling the header */
+#main-header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5vh; /* 5% of viewport height */
+    background-color: #333;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    z-index: 1000; /* Ensures header stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* slight drop shadow */
+    display: flex;
+    position: fixed;
+}
+
+/* Styling the header columns */
+.header-column-end {
+    flex: 0 0 20%; /* 20% width for each column */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-column-middle {
+    flex: 0 0 60%; /* 20% width for each column */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling the header logo */
+.header-column img {
+    max-height: 100%; /* Ensure the logo fits within the column */
+}
+
+/* Styling the header title */
+.header-title {
+    margin: 0; /* Reset margin */
+    opacity: 0; /* Initially hide the title */
+    transition: opacity 0.5s ease; /* Add transition for opacity */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Styling the menu icon */
+.menu-icon {
+    font-size: 24px;
+    float: right;
+}
+
+/* Styling the logo */
+.logo {
+    height: 5vh; /* Match header height */
+    margin-right: auto;
+}
+
+    /* Styling the footer */
+    footer {
+    width: 100%;
+    height: 5vh; /* 5% of viewport height */
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    }
+
+    /* Styling the footer content */
+    .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    }
+
+    /* Styling the footer content */
+    .footer-content-index {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        bottom: 0px;
+        
+        }
+
+    /* Styling the footer logo */
+    .footer-logo img {
+    height: 4vh; /* Adjust the height as needed */
+    }
+
+    /* Styling the footer heading */
+    .footer-heading {
+        color: white;
+        float:left;
+        height: inherit;
+        vertical-align: middle;
+        font-size: 18px;
+    }
+
+
+/* Styling the main content */
+main {
+
+    padding: 0;
+}
+
+/* Styling the banner */
+.banner {
+
+    margin-top: 5vh; /* Height of the header */
+    left: 0;
+    width: 100%;
+    height: 20vh; /* 10% of viewport height */
+    background-color: #555;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2); /* Inward drop shadow */
+    z-index: 999; /* Ensure the banner stays below the header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./assets/media/Client\ Satisfaction\ survery\ background.jpg);
+    background: linear-gradient(45deg, #28a745, #2b53a0, #e40313);
+}
+.bannerNarrow {
+
+    margin-top: 5vh; /* Height of the header */
+    left: 0;
+    width: 100%;
+    height: 10vh; /* 10% of viewport height */
+    background-color: #555;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.2); /* Inward drop shadow */
+    z-index: 999; /* Ensure the banner stays below the header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./assets/media/Client\ Satisfaction\ survery\ background.jpg);
+    background: linear-gradient(45deg, #28a745, #2b53a0, #e40313);
+}
+
+/* Banner title */
+.bannerNarrow h2,
+.banner h2 {
+    color: #fff;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+/* Centering the content */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0;
+    padding-top: 1vh; /* Compensate for the banner */
+}  
+.weather-side {
+    width: 100px;
+    border-radius: 0px 16px 16px 0px ;
+    display: flex;
+    background-color: white;
+    padding: 10px 5px; /* Add padding */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* slight drop shadow */
+    height: fit-content;
+    text-align: center;
+}
+.content-wrapper p,
+.content-wrapper h2 {
+    margin: 10px;
+}
+
+/* Example styles for content */
+h1 {
+    margin-bottom: 20px;
+}
+p {
+    margin-bottom: 10px;
+}
+
+/* Side menu styles */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Hide the menu by default */
+    width: 250px;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
+    transition: left 0.3s ease; /* Add smooth transition */
+    z-index: 1001; /* Ensure the menu stays above other elements */
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.side-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.side-menu ul li:hover {
+    background-color: #ddd; /* Background color on hover */
+    width: 100%;
+}
+
+.side-menu ul li a:hover {
+    color: #000;
+}
+
+.menu-toggle {
+    width: 100%;
+    cursor: pointer;
+    font-size: 30px;
+    margin: auto;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.main-section{
+    display: flex; /* Use flexbox to layout children */
+}
+
+.bodyside-container{
+    flex: 0 0 10%; /* 20% width for each column */
+    z-index: 900; /* Ensures header stays on top of other content */
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bodymiddle {
+    flex: 0 0 60%; /* 20% width for each column */
+    margin: 5px auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-gap: 15px;
+    grid-row-gap: 25px;
+    margin: auto;
+    max-width: 1000px; /* Added to limit the maximum width of the grid */
+    position:relative;
+    margin-bottom: auto;
+    margin-top: 0;
+    height: auto;
+}
+
+.grid-item {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    height: 120px;
+    min-width: 100px;
+    max-width: 400px;
+    position: relative; /* Added for positioning */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* This adds a shadow */
+    display: flex; /* Enable flexbox */
+    justify-content: left; /* Center horizontally */
+    align-items: top; /* Center vertically */
+    transition: background-color 0.3s, transform 0.3s; /* Add transition */
+    
+}
+
+.grid-item h3{
+    font-size: 1.1rem;
+    
+}
+.grid-item:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+
+.button-container {
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* 10% less than the width of the grid item */
+    text-align: center;
+}
+
+.button-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    /* background-color: #007bff;*/
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px; /* Add border radius for rounded corners */
+    
+}
+.button-wide{
+    background-color: #28a745;
+}
+
+.grid1{
+    border-color: #28a745;
+}
+.button-1 {
+    background-color: #28a745;
+}
+
+.grid2{
+    border-color:  #2b53a0;
+}
+.button-2 {
+    background-color: #2b53a0;
+}
+
+.grid3 {
+    border-color: #e40313;
+}
+.button-3 {
+    background-color: #e40313;
+}
+
+.button-1:hover {
+    background-color: #1e8135;
+}
+
+.button-2:hover {
+    background-color: #234585;
+}
+
+.button-3:hover {
+    background-color: #b9020e;
+}
+
+.gg-menu-grid-r {
+box-sizing: border-box;
+position: relative;
+display: block;
+transform: scale(var(--ggs,2));
+width: 16px;
+height: 16px;
+float: right;
+margin: 30px 24px;
+}
+
+.gg-menu-grid-r::before {
+content: "";
+display: block;
+box-sizing: border-box;
+position: absolute;
+width: 4px;
+height: 4px;
+background: currentColor;
+box-shadow:
+0 6px 0,
+6px 6px 0,
+12px 6px 0,
+6px 12px 0,
+12px 12px 0,
+6px 0 0,
+12px 0 0,
+0 12px 0
+;
+} 
+/* Styling the header title with fade-in effect */
+.fade-in {
+opacity: 1;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 700px) {
+    .banner {
+        height: 10vh; /* Adjusted height for smaller screens */
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+        padding: 0;
+        margin: auto;
+        flex: 0 0 70%; /* 20% width for each column */
+        margin-bottom: 40px;
+
+    }
+    .banner h2 {
+        color: #fff;
+        font-size: 2em;
+    }
+    .bodyside-container{
+        flex: 0 0 5%; /* 20% width for each column */
+        z-index: 900; /* Ensures header stays on top of other content */
+        display: flex;
+        float: right;
+    }
+
+    .header-column-middle {
+        flex: 0 0 25%; /* 20% width for each column */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header-title {
+        font-size: medium;
+        display: none;
+    }
+    .main-section{
+        width: 100%;
+        display: flex; /* Use flexbox to layout children */
+    }
+    .bodymiddle {
+        flex: 0 0 80%;
+    }
+    /* Banner title */
+    .bannerNarrow h2,
+    .banner h2 {
+        color: #fff;
+        font-size: 1.5em;
+    }
+
+}
+
+.button-container-index {
+    text-align: center; /* Center align the buttons */
+    margin-top: 30px; /* Adjust margin as needed */
+}
+/* Styling for the buttons */
+.button-container-index button {
+    display: inline-block; /* Display buttons side by side */
+    padding: 15px 30px; /* Add padding */
+    margin: 20px; /* Add margin around buttons */
+    border: none; /* Remove default button border */
+    border-radius: 8px; /* Add border radius for rounded corners */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for smooth hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    font-size: 18px; /* Increase font size */
+}
+
+/* Hover effect for buttons */
+.button-container-index button:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+    transform: translateY(-2px); /* Move button up slightly on hover */
+}
+
+/* Animation for button press effect */
+.button-container-index button:active {
+    transform: translateY(1px); /* Move button down slightly when pressed */
+    box-shadow: none; /* Remove shadow when pressed */
+}
+
+/* Styling for the sidebar */
+.sidebar-body {
+
+    display: flex;
+    width: 100%; /* Adjust width as needed */
+    background-color: white;
+    padding: 10px 5px; /* Add padding */
+    border-radius: 16px 0 0 16px ; /* Add border radius for rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* slight drop shadow */
+    height: fit-content;
+    text-align: center;
+}
+
+/* Styling for the sidebar links */
+.sidebar-body ul {
+    width: 100%;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+.sidebar-body li {
+    display: flex;
+    margin-bottom: 10px; /* Adjust spacing between links */
+    font-size: 40px;
+    cursor: pointer;
+    font-weight: 500;
+    flex-direction: column;
+}
+.sidebar-body li p {
+    margin-bottom: 10px; /* Adjust spacing between links */
+    font-size: 20px;
+}
+
+.sidebar-body a {
+
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Link color */
+    display: flex; /* Use flexbox for icon alignment */
+    align-items: center; /* Align items vertically */
+    font-size: 10px;
+    margin: auto;
+
+}
+
+        /* Style for user container */
+        #users-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Style for user card */
+        .user-card {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+            overflow:auto; /* Prevent overflow */
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* Style for user image */
+        .user-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: block;
+            object-fit: cover; /* Ensure image fits in the container */
+        }
+
+        /* Style for user name */
+        .user-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            white-space: nowrap; /* Prevent line breaks */
+            overflow: hidden; /* Prevent text from overflowing */
+            text-overflow: ellipsis; /* Display ellipsis for overflowed text */
+        }
+
+        /* Style for user email */
+        .user-email {
+            color: #666;
+            font-size: 14px;
+            white-space: nowrap; /* Prevent line breaks */
+            overflow: hidden; /* Prevent text from overflowing */
+            text-overflow: ellipsis; /* Display ellipsis for overflowed text */
+        }
+
+
+        .hidden {
+            display: none;
+          }
+
+          .questionnaire {
+            max-width: 1100px;
+            margin: 10px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 10px 20px;
+            
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+
+          }
+          .question {
+
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            display: none;
+          }
+          .question.active {
+            display: block;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+          }
+        .questionButtons{
+            display: flex;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+          .questionbody{
+            display: flex;
+            width: 100%;
+          }
+          .question label {
+            flex: 1;
+            text-align: left;
+            margin-right: 20px;
+            font-size: 12px;
+            max-width: 60%;
+            overflow:visible;
+          }
+          .question textarea {
+            flex: 2;
+            max-width: 800px;
+            min-width:600px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: 600px;
+            resize: vertical;
+          }
+          .previous-button {
+            float: left;
+            margin-right: auto;
+            background-color: #ccc;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+          }
+          .previous-button:hover {
+            background-color: #bbb;
+          }
+          .next-button {
+            float: right;
+            margin-left: auto;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+          }
+          .next-button:hover {
+            background-color: #45a049;
+          }
+
+          .questionTopic{
+            font-size: 20px;
+            font-weight: 500;
+          }
+          .wordCount{
+            display: block;
+            margin: 0;
+            font-size: 12px;
+          }
+.detailsform{
+    min-height: 600px;
+}
+          /* Style for the text input */
+input[type="text"] {
+    width: calc(100% - 10px); /* 100% minus the padding */
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="email"] {
+    width: calc(100% - 20px); /* 100% minus the padding */
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50; /* Green */
+}
+
+input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+input[type="email"]:focus {
+    border-color: #4CAF50; /* Green */
+}
+
+input[type="email"]::placeholder {
+    color: #aaa;
+}
